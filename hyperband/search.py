@@ -333,10 +333,11 @@ class HyperbandSearchCV(BaseSearchCV):
         self.max_iter = max_iter
         self.skip_last = skip_last
         self.random_state = random_state
+        self.iid = iid
 
         super(HyperbandSearchCV, self).__init__(
             estimator=estimator, scoring=scoring, n_jobs=n_jobs,
-            iid=iid, refit=refit, cv=cv, verbose=verbose,
+            refit=refit, cv=cv, verbose=verbose,
             pre_dispatch=pre_dispatch, error_score=error_score,
             return_train_score=return_train_score)
 
